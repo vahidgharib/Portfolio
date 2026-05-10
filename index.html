@@ -2,10 +2,8 @@
 <html lang="en">
 <head>
  
-
+<meta property="og:image" content="https://vahidgharib.github.io/Portfolio/og-image.png">
 <meta property="og:title" content="Vahid Gharibloo — Portfolio">
-<meta property="og:description" content="Computer Engineering Student & Professional Pianist.">
-<meta property="og:image" content="https://vahidgharib.github.io/Portfolio/og-image.jpg.png">
 <meta property="og:url" content="https://vahidgharib.github.io/Portfolio/">
 <meta property="og:type" content="website">
 <meta charset="UTF-8">
@@ -22,6 +20,7 @@
     --light: #f5f5f0;
     --accent: #4ecdc4;
     --piano: #a78bfa;
+    --meridian: #0ea5e9;
     --mono: 'Space Mono', monospace;
     --display: 'Space Grotesk', sans-serif;
   }
@@ -237,6 +236,8 @@
   .btn-ghost:hover { background: var(--light); color: var(--dark); }
   .btn-purple { background: var(--piano); color: var(--dark); border-color: var(--piano); }
   .btn-purple:hover { background: transparent; color: var(--piano); }
+  .btn-blue { background: var(--meridian); color: var(--dark); border-color: var(--meridian); }
+  .btn-blue:hover { background: transparent; color: var(--meridian); }
 
   /* PROJECT CARD */
   .project-card {
@@ -258,6 +259,7 @@
   }
   .ay::before { background: var(--yellow); }
   .ap::before { background: var(--piano); }
+  .am::before { background: var(--meridian); }
 
   .project-number {
     font-family: var(--display);
@@ -271,6 +273,7 @@
   }
   .ay .project-number { color: rgba(255,214,0,0.06); }
   .ap .project-number { color: rgba(167,139,250,0.06); }
+  .am .project-number { color: rgba(14,165,233,0.06); }
 
   .project-kicker {
     font-size: 0.65rem;
@@ -280,6 +283,7 @@
   }
   .ay .project-kicker { color: var(--accent); }
   .ap .project-kicker { color: var(--piano); }
+  .am .project-kicker { color: var(--meridian); }
 
   .project-title {
     font-family: var(--display);
@@ -364,6 +368,7 @@
   }
   .cy { border-color: rgba(255,214,0,0.35); color: var(--yellow); }
   .cp { border-color: rgba(167,139,250,0.35); color: var(--piano); }
+  .cm { border-color: rgba(14,165,233,0.35); color: var(--meridian); }
 
   .card-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 
@@ -661,7 +666,6 @@
 
     <div class="tags">
       <span class="chip cp">HTML / CSS</span>
-      
       <span class="chip">Responsive Design</span>
       <span class="chip">i18n / Multilingual</span>
       <span class="chip">WhatsApp API</span>
@@ -672,6 +676,77 @@
     <div class="card-btns">
       <a href="https://vahidgharib.github.io/vahidpiano/" target="_blank" class="btn btn-purple">Live Site →</a>
       <a href="https://github.com/vahidgharib" target="_blank" class="btn btn-ghost">GitHub →</a>
+    </div>
+  </div>
+
+  <!-- 03 HOSPITAL MANAGEMENT SYSTEM -->
+  <div class="project-card am">
+    <div class="project-number">03</div>
+    <div class="project-kicker">Software Engineering · UI/UX · Prototype</div>
+    <h2 class="project-title">Hospital management system</h2>
+    <p class="project-desc">
+      A centralized "calm system of record" designed to replace pen-and-paper hospital workflows. Built following the <strong style="color:var(--light)">Scrum methodology</strong>, this prototype integrates four distinct user portals (Patient, Doctor, Nurse, Admin) into one role-based platform. Key priorities include HIPAA-aligned security, HIPAA-standard data consistency, and streamlined clinical handoffs between nursing and medical staff.
+    </p>
+
+    <div class="screenshots">
+      <div class="screenshot">
+        <img src="Screenshot 2026-05-11 011118.png" alt="Login screen with 2FA requirement" onerror="this.style.opacity='0'; this.nextElementSibling?.setAttribute('data-fallback','true');">
+        <div class="screenshot-label">Login & 2FA</div>
+      </div>
+      <div class="screenshot">
+        <img src="Screenshot 2026-05-11 010543.png" alt="Patient dashboard overview" onerror="this.style.opacity='0';">
+        <div class="screenshot-label">Patient Dashboard</div>
+      </div>
+      <div class="screenshot">
+        <img src="Screenshot 2026-05-11 010610.png" alt="Doctor daily schedule view" onerror="this.style.opacity='0';">
+        <div class="screenshot-label">Doctor Schedule</div>
+      </div>
+      <div class="screenshot">
+        <img src="Screenshot 2026-05-11 010645.png" alt="Nurse floor view with triage" onerror="this.style.opacity='0';">
+        <div class="screenshot-label">Nurse View</div>
+      </div>
+      <div class="screenshot">
+        <img src="Screenshot 2026-05-11 010721.png" alt="Prescription and refill requests" onerror="this.style.opacity='0';">
+        <div class="screenshot-label">Prescriptions</div>
+      </div>
+      <div class="screenshot">
+        <img src="Screenshot 2026-05-11 010748.png" alt="Administrative operations console" onerror="this.style.opacity='0';">
+        <div class="screenshot-label">Admin Console</div>
+      </div>
+    </div>
+
+    <div class="tags">
+      <span class="chip cm">Agile / Scrum</span>
+      <span class="chip cm">UML Modeling</span>
+      <span class="chip cm">UI/UX Prototype</span>
+      <span class="chip">SRS / SDD Documentation</span>
+      <span class="chip">HIPAA Alignment</span>
+      <span class="chip">RBAC Security</span>
+      <span class="chip">Requirement Elicitation</span>
+      <span class="chip">System Architecture</span>
+    </div>
+
+    <div class="card-btns">
+      
+    </div>
+
+    <div class="challenges">
+      <div class="challenge-label">Key Technical Challenges Solved</div>
+      <div class="challenge-item">
+        <span><strong style="color:var(--light)">Ethical Lab Release Logic</strong> — Implemented a 48-hour "Management Review" holding period. This prevents patients from receiving critical diagnoses (e.g., life-altering findings) via notification before a doctor can review and provide counsel.</span>
+      </div>
+      <div class="challenge-item">
+        <span><strong style="color:var(--light)">Safety-Critical Prescribing</strong> — Built a real-time allergy cross-reference system. If a doctor prescribes a drug (e.g., Penicillin) matching the patient's documented allergy list, the system triggers a mandatory UI block requiring explicit risk acknowledgement.</span>
+      </div>
+      <div class="challenge-item">
+        <span><strong style="color:var(--light)">Minor & Elderly Privacy (Consent Rules)</strong> — Solved complex account inheritance. Designed permissions where parents have full record access for children < 14, but automatically switches to "Schedule-Only" for ages 14-17 to respect legal minor privacy rights.</span>
+      </div>
+      <div class="challenge-item">
+        <span><strong style="color:var(--light)">No-Show & Slot Optimization</strong> — To reduce clinic gaps, the system enforces a 24-hour online cancellation block and automatically bans online booking for users with $\geq 3$ no-shows, requiring manual front-desk intervention.</span>
+      </div>
+      <div class="challenge-item">
+        <span><strong style="color:var(--light)">Clinical Sync Workflow</strong> — Designed a high-speed handoff from Nurse triage to Doctor charts. Vitals (BP, HR, Temp) recorded by nurses appear instantly as pinned alerts in the Doctor's dashboard to minimize redundant questioning and lag.</span>
+      </div>
     </div>
   </div>
 
